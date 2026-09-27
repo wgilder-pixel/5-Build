@@ -1,4 +1,4 @@
-/* CSS by Christina Carrasquilla, iteration by */
+/* CSS by Christina Carrasquilla, iteration by Whitney Gilder*/
 
 /* ===== Color Palette ===== 
 
@@ -17,7 +17,6 @@ body {
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
     display:grid;
     grid-template-columns:1fr;
 }
@@ -71,14 +70,12 @@ img {
 #screenings, #workshops, #collaborations {
     background-color: #1e293b;
     padding: 1rem;
-    padding: 1rem;
     border-left: 4px solid #38bdf8;
 }
 
 aside {
     background-color: #38bdf8;
     color: #1e293b;
-    padding: 1rem;
     padding: 1rem;
 }
 
@@ -104,8 +101,27 @@ footer {
 
 /* ===== Media Query (Medium) ===== */
 /* write a media query for a screen with at least 800px */
-/* change the body's grid template to 1fr 300px */
-/* target the header, nav, and footer and style their grid-column to 1/-1 */
-/* target the nav and display it flex, spaceed around */
-/* target the .card-row to display flex */
-/* target the sections in .card-row witha width for 30% */
+@media (min-width: 800px) {
+    body {
+        grid-template-columns: 1fr 300px; } 
+    header {
+        grid-column: 1/-1;
+    }
+    nav {
+        grid-column: 1/-1;  
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .card-row {
+    display: flex;
+    }
+
+    .card-row section {
+    width: 30%;
+    }
+    footer {
+        grid-column: 1 / -1;
+    }
+}
